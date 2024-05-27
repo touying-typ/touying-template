@@ -26,7 +26,7 @@ jobs:
         run: pip install touying
 
       - name: Build HTML File
-        run: touying main.typ --output build/index.html --format html
+        run: touying compile main.typ --output build/index.html --format html
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
