@@ -173,7 +173,6 @@ Fletcher Animation in Touying:
   edge((0,0), (2,0), `close()`, "-|>", bend: -40deg),
 )
 
-
 = Theroems
 
 == Prime numbers
@@ -193,4 +192,51 @@ Fletcher Animation in Touying:
 #proof[
   Suppose to the contrary that $p_1, p_2, dots, p_n$ is a finite enumeration
   of all primes. Set $P = p_1 p_2 dots p_n$. Since $P + 1$ is not in our list,
-  it cannot be prime. Thus, some prime factor $p
+  it cannot be prime. Thus, some prime factor $p_j$ divides $P + 1$.  Since
+  $p_j$ also divides $P$, it must divide the difference $(P + 1) - P = 1$, a
+  contradiction.
+]
+
+#corollary[
+  There is no largest prime number.
+] <cor_largest_prime>
+#corollary[
+  There are infinitely many composite numbers.
+]
+
+#theorem[
+  There are arbitrarily long stretches of composite numbers.
+]
+
+#proof[
+  For any $n > 2$, consider $
+    n! + 2, quad n! + 3, quad ..., quad n! + n #qedhere
+  $
+]
+
+
+= Others
+
+== Side-by-side
+
+#slide(composer: (1fr, 1fr))[
+  First column.
+][
+  Second column.
+]
+
+
+== Multiple Pages
+
+#lorem(200)
+
+
+// appendix by freezing last-slide-number
+#let s = (s.methods.appendix)(self: s)
+#let (slide, empty-slide) = utils.slides(s)
+
+== Appendix
+
+#slide[
+  Please pay attention to the current slide number.
+]
